@@ -23,3 +23,4 @@ class Solution(object):
                 else:
                     current_b = current_b.next
             current_a = current_a.next
+        return None
