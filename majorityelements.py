@@ -1,6 +1,6 @@
 class Solution(object):
 
-    def majorityElement(self, nums):
+    def majorityElement(nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -9,3 +9,10 @@ class Solution(object):
         You may assume that the array is non-empty and the majority element
         always exist in the array.
         """
+        d = {}
+        for num in nums:
+            if num not in d:
+                d[num] = 1
+            else:
+                d[num] += 1
+        return max(d, key=d.get)
